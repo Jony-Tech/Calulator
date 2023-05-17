@@ -378,7 +378,7 @@ public class Calculator extends javax.swing.JFrame {
 
     private void Btn_PorcentajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_PorcentajeActionPerformed
         try{
-            Double num = Double.parseDouble(JL_Resultado.getText());
+            Double num = Double.valueOf(JL_Resultado.getText());
         if (JL_Resultado.getText().equals("")) {
             return;
         }
@@ -406,7 +406,7 @@ public class Calculator extends javax.swing.JFrame {
 
     private void Btn_ResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ResultadoActionPerformed
             try{
-                Double num2 = Double.parseDouble(JL_Resultado.getText());
+                Double num2 = Double.valueOf(JL_Resultado.getText());
             switch (operacion) {
             case "suma":
                 resultado = num1 + num2;
@@ -445,7 +445,7 @@ public class Calculator extends javax.swing.JFrame {
             if (JL_Resultado.getText().equals("") || lastValue.equals(signo)) {
                 return;
             }
-            num1 = Double.parseDouble(JL_Resultado.getText());
+            num1 = Double.valueOf(JL_Resultado.getText());
             operacion = TipoOperacion;
             JL_Operacion.setText(JL_Resultado.getText() + signo);
             JL_Resultado.setText("");
